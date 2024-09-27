@@ -1,0 +1,80 @@
+[
+  {
+    "bookId": 1,
+    "bookName": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "image": "./Images/book_1.jpg",
+    "review": "A gripping psychological thriller with a twist that will leave you speechless.",
+    "totalPages": 336,
+    "rating": 4.5,
+    "category": "Thriller",
+    "tags": ["Suspense", "Psychological"],
+    "publisher": "Celadon Books",
+    "yearOfPublishing": 2019
+  },
+  {
+    "bookId": 2,
+    "bookName": "Educated",
+    "author": "Tara Westover",
+    "image": "./Images/book_2.jpg",
+    "review": "An inspiring memoir about overcoming a challenging upbringing to pursue knowledge.",
+    "totalPages": 334,
+    "rating": 4.7,
+    "category": "Memoir",
+    "tags": ["Inspiration", "Autobiography"],
+    "publisher": "Random House",
+    "yearOfPublishing": 2018
+  },
+  {
+    "bookId": 3,
+    "bookName": "The Midnight Library",
+    "author": "Matt Haig",
+    "image": "./Images/book_3.jpg",
+    "review": "A heartwarming and thought-provoking novel about second chances.",
+    "totalPages": 304,
+    "rating": 4.6,
+    "category": "Fiction",
+    "tags": ["Fantasy", "Philosophy"],
+    "publisher": "Canongate Books",
+    "yearOfPublishing": 2020
+  },
+  {
+    "bookId": 4,
+    "bookName": "Where the Crawdads Sing",
+    "author": "Delia Owens",
+    "image": "./Images/book_4.jpg",
+    "review": "A beautifully written mystery set in the marshlands of North Carolina.",
+    "totalPages": 368,
+    "rating": 4.8,
+    "category": "Mystery",
+    "tags": ["Nature", "Mystery"],
+    "publisher": "G.P. Putnam's Sons",
+    "yearOfPublishing": 2018
+  },
+  {
+    "bookId": 5,
+    "bookName": "Sapiens: A Brief History of Humankind",
+    "author": "Yuval Noah Harari",
+    "image": "./Images/book_5.jpg",
+    "review": "An insightful journey through the history of the human race.",
+    "totalPages": 443,
+    "rating": 4.7,
+    "category": "Non-fiction",
+    "tags": ["History", "Philosophy"],
+    "publisher": "Harvill Secker",
+    "yearOfPublishing": 2014
+  },
+  {
+    "bookId": 6,
+    "bookName": "Becoming",
+    "author": "Michelle Obama",
+    "image": "./Images/book_6.jpg",
+    "review": "A powerful memoir that showcases resilience and hope.",
+    "totalPages": 448,
+    "rating": 4.9,
+    "category": "Biography",
+    "tags": ["Inspiration", "Autobiography"],
+    "publisher": "Crown Publishing Group",
+    "yearOfPublishing": 2018
+  }
+]
