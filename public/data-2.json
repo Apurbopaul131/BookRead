@@ -1,0 +1,13 @@
+{
+  "bookId": 2,
+  "bookName": "Educated",
+  "author": "Tara Westover",
+  "image": "https://i.ibb.co.com/TbvpXtG/book-2.jpg",
+  "review": "An inspiring memoir about overcoming a challenging upbringing to pursue knowledge.",
+  "totalPages": 334,
+  "rating": 4.7,
+  "category": "Memoir",
+  "tags": ["Inspiration", "Autobiography"],
+  "publisher": "Random House",
+  "yearOfPublishing": 2018
+}

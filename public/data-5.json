@@ -1,0 +1,13 @@
+{
+  "bookId": 4,
+  "bookName": "Where the Crawdads Sing",
+  "author": "Delia Owens",
+  "image": "https://i.ibb.co.com/5MVkyfb/book-5.jpg",
+  "review": "A beautifully written mystery set in the marshlands of North Carolina.",
+  "totalPages": 368,
+  "rating": 4.8,
+  "category": "Mystery",
+  "tags": ["Nature", "Mystery"],
+  "publisher": "G.P. Putnam's Sons",
+  "yearOfPublishing": 2018
+}

@@ -6,10 +6,12 @@ import {
 } from "react-router-dom";
 import App from './App.jsx';
 import About from './Components/About/About.jsx';
+import BookInfo from './Components/BookInfo/BookInfo.jsx';
+import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
 import Home from './Components/Home/Home.jsx';
 import ListedBooks from './Components/ListedBooks/ListedBooks.jsx';
 import PagesRead from './Components/PagesRead/PagesRead.jsx';
-import { loadingDataforHome } from './Components/Utilities/Utilites.js';
+import { loadingDataforHome, singleBookLoader } from './Components/Utilities/Utilites.js';
 import './index.css';
 
 const router = createBrowserRouter([
@@ -17,6 +19,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <App/>,
     loader:loadingDataforHome,
+    errorElement:<ErrorPage/>,
     children:[
       {
         path:"/home",
@@ -33,6 +36,11 @@ const router = createBrowserRouter([
       {
         path:"/about",
         element:<About/>
+      },
+      {
+        path:"/book/:bookId",
+        element:<BookInfo></BookInfo>,
+        loader: singleBookLoader
       }
 
     ]

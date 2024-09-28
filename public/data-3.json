@@ -1,0 +1,13 @@
+{
+  "bookId": 3,
+  "bookName": "The Midnight Library",
+  "author": "Matt Haig",
+  "image": "https://i.ibb.co.com/4WBVVx1/book-3.jpg",
+  "review": "A heartwarming and thought-provoking novel about second chances.",
+  "totalPages": 304,
+  "rating": 4.6,
+  "category": "Fiction",
+  "tags": ["Fantasy", "Philosophy"],
+  "publisher": "Canongate Books",
+  "yearOfPublishing": 2020
+}

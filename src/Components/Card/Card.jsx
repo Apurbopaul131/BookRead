@@ -1,8 +1,15 @@
 import PropTypes from 'prop-types';
 import { CiStar } from "react-icons/ci";
+import { useNavigate } from 'react-router-dom';
 import './Card.css';
+
+//Card is redered from home component
 const Card = ({book}) => {
+    //Used useNavigate hook for navigate specific id
+    const navigate = useNavigate();
+    //desturcture the book obj property
     const {
+        bookId,
         bookName,
         author,
         image,
@@ -10,8 +17,12 @@ const Card = ({book}) => {
         category,
         rating
     } = book;
+
+    const handleBookClick = (id) =>{
+        navigate(`/book/${id}`);
+    }
     return (
-        <div className='border-2 border-[#13131326] rounded-2xl p-6 space-y-4'>
+        <div onClick={()=>handleBookClick(bookId)} className='border-2 border-[#13131326] rounded-2xl p-6 space-y-4'>
             <img src={image} alt="" className='w-[345px] h-[345px] rounded-2xl'/>
             <div className='space-y-4 pb-3 border-b-2 border-dashed border-[%13131326]'>
                 <div className='flex gap-8'>
@@ -29,6 +40,8 @@ const Card = ({book}) => {
         </div>
     );
 };
+
+//prop validation
 Card.propTypes = {
     book:PropTypes.object.isRequired
 }

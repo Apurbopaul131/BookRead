@@ -1,0 +1,13 @@
+{
+  "bookId": 1,
+  "bookName": "The Silent Patient",
+  "author": "Alex Michaelides",
+  "image": "https://i.ibb.co.com/8NxqDNp/book-1.jpg",
+  "review": "A gripping psychological thriller with a twist that will leave you speechless.",
+  "totalPages": 336,
+  "rating": 4.5,
+  "category": "Thriller",
+  "tags": ["Suspense", "Psychological"],
+  "publisher": "Celadon Books",
+  "yearOfPublishing": 2019
+}

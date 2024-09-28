@@ -1,6 +1,6 @@
 import BannerPic from '../../../public/Images/banner_update.png';
 import "./Banner.css";
-
+//Banner is rederd from Home component
 const Banner = () => {
   return (
     <div className="hero bg-[#1313130D] h-auto lg:h-[400px] mt-5 rounded-3xl">

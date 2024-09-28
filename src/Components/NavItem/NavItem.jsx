@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import './NavItem.css';
 
+//NavItem is render form Navber component
 const NavItem = ({route}) => {
     const {
         path,

@@ -1,0 +1,13 @@
+{
+  "bookId": 6,
+  "bookName": "Becoming",
+  "author": "Michelle Obama",
+  "image": "https://i.ibb.co.com/598hXfh/book-6.jpg",
+  "review": "A powerful memoir that showcases resilience and hope.",
+  "totalPages": 448,
+  "rating": 4.9,
+  "category": "Biography",
+  "tags": ["Inspiration", "Autobiography"],
+  "publisher": "Crown Publishing Group",
+  "yearOfPublishing": 2018
+}
