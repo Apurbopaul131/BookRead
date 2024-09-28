@@ -1,13 +1,13 @@
 {
-  "bookId": 4,
-  "bookName": "Where the Crawdads Sing",
-  "author": "Delia Owens",
-  "image": "https://i.ibb.co.com/5MVkyfb/book-5.jpg",
-  "review": "A beautifully written mystery set in the marshlands of North Carolina.",
-  "totalPages": 368,
-  "rating": 4.8,
-  "category": "Mystery",
-  "tags": ["Nature", "Mystery"],
-  "publisher": "G.P. Putnam's Sons",
-  "yearOfPublishing": 2018
+  "bookId": 5,
+  "bookName": "Sapiens: A Brief History of Humankind",
+  "author": "Yuval Noah Harari",
+  "image": "./Images/book_5.jpg",
+  "review": "An insightful journey through the history of the human race.",
+  "totalPages": 443,
+  "rating": 4.7,
+  "category": "Non-fiction",
+  "tags": ["History", "Philosophy"],
+  "publisher": "Harvill Secker",
+  "yearOfPublishing": 2014
 }

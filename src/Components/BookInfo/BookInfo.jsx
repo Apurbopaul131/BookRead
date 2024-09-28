@@ -1,12 +1,16 @@
 import { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { ReadBookList } from '../LevelContext/LevelContext';
+import { ReadBookList, WishBookList } from '../LevelContext/LevelContext';
 import './BookInfo.css';
 
 const BookInfo = () => {
     const data = useLoaderData();
     //Take readlist and setRead list form context api
     const [readlist,setReadlist] = useContext(ReadBookList);
+    
+    //Take readlist and setRead list form context api
+    const [wishlist,setWishlist] = useContext(WishBookList);
+
     const {
         bookName,
         author,
@@ -20,15 +24,37 @@ const BookInfo = () => {
         yearOfPublishing
     } = data;
     
+    //This function called when click on the read button
     const handleReadList =(readBook) =>{
+        console.log(readBook);
         const duplicateBook = readlist.find((bookItem)=>bookItem.bookId === readBook.bookId);
-        if(!duplicateBook){
+        const duplicateWishlist = wishlist.find((bookItem)=>bookItem.bookId === readBook.bookId);
+        if(!duplicateBook && !duplicateWishlist){
             setReadlist([...readlist,readBook]);
+        }
+        else if(duplicateWishlist){
+            const reamainingWishlist = wishlist.filter((wishBookItem)=> wishBookItem.bookId !== duplicateWishlist.bookId);
+            setWishlist(reamainingWishlist);
+            setReadlist([...readlist, readBook]);
         }
         else{
             alert('book already add to readlist');
         }
         
+    }
+
+    const handleWishList = (wishBook) =>{
+        const findReadBook = readlist.find((readItem)=>readItem.bookId === wishBook.bookId);
+        const findWishBook = wishlist.find((wishItem)=>wishItem.bookId === wishBook.bookId);
+        if(findReadBook){
+            alert('The book already read..');
+        }
+        else if(findWishBook){
+            alert('The book already added to wish list..');
+        }
+        else{
+            setWishlist([...wishlist,wishBook]);
+        }
     }
     return (
         <div className='grid grid-cols-2 gap-8 mt-5'>
@@ -58,7 +84,7 @@ const BookInfo = () => {
                 </div>
                 <div className='flex gap-4'>
                     <button onClick={()=>handleReadList(data)} className="btn bg-white border-2 border-[#1313134D]">Read</button>
-                    <button className="btn bg-[#50B1C9] text-white font-semibold">WishList</button>
+                    <button onClick={()=>handleWishList(data)} className="btn bg-[#50B1C9] text-white font-semibold">WishList</button>
                 </div>
             </div>
         </div>

@@ -1,31 +1,38 @@
 import { useContext, useState } from "react";
-import { ReadBookList } from "../LevelContext/LevelContext";
+import { ReadBookList, WishBookList } from "../LevelContext/LevelContext";
+import SelactItem from "../SetactItem/SelactItem";
 import "./ListedBooks.css";
 
 const ListedBooks = () => {
-  const [readlist] = useContext(ReadBookList);
-  const [myCar, setMyCar] = useState("Sort By");
-  const {
-    rating,
-    totalPages,
-    yearOfPublishing
-  } = readlist;
+  const [readlist,setReadlist] = useContext(ReadBookList);
+  const [wishList, setWishlist] = useContext(WishBookList);
+  console.log(readlist);
+  console.log(wishList);
+//   const {
+//     rating,
+//     totalPages,
+//     yearOfPublishing
+//   } = readlist;
+  const [sortData, setSortData] = useState("sort by");
   const handleChange = (event) => {
-    setMyCar(event.target.value)
+    setSortData(event.target.value)
+    const readListedBook = [...readlist];
+    const wishlistedBook = [...wishList];
+    readListedBook.sort((previousBook,currentBook)=>currentBook[event.target.value] - previousBook[event.target.value]);
+    wishlistedBook.sort((previousBook,currentBook)=>currentBook[event.target.value] - previousBook[event.target.value]);
+    
+    setReadlist(readListedBook);
+    setWishlist(wishlistedBook);
+    console.log('sorting done');
+    
   }
   return (
     <div>
       <h1 className="text-3xl font-bold py-8 bg-[#1313130D] rounded-2xl text-center">
-        Listed Books
+        Books
       </h1>
       <div className="my-10">
-        <form className="w-1/2 mx-auto flex justify-center">
-          <select value={myCar} onChange={handleChange} className="py-4 flex gap-3 items-center bg-[#23BE0A] text-white rounded-md border-none">
-            <option value="Ford">{rating}</option>
-            <option value="Volvo">{totalPages}</option>
-            <option value="Fiat">{}</option>
-          </select>
-        </form>
+        <SelactItem sortData={sortData} handleChange={handleChange}></SelactItem>
       </div>
     </div>
   );
