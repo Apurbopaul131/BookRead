@@ -51,6 +51,6 @@ const FinalBook = ({ book }) => {
   );
 };
 FinalBook.propTypes = {
-  book: PropTypes.array.isRequired,
+  book: PropTypes.object.isRequired,
 };
 export default FinalBook;

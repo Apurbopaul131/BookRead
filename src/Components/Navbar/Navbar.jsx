@@ -1,6 +1,7 @@
 import NavItem from "../NavItem/NavItem";
 import "./Navbar.css";
 
+//This component is render from App.jsx that is the root component of react router.
 const Navbar = () => {
   const routes = [
     { id: 1, path: "/home", name: "Home" },

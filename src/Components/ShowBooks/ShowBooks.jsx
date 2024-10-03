@@ -4,7 +4,7 @@ import './ShowBooks.css';
 const ShowBooks = ({booksData}) => {
     console.log(booksData)
     return (
-        <div className='mb-5'>
+        <div className=''>
             {
                 booksData.map((book)=><FinalBook key={book.bookId} book={book}></FinalBook>)
             }
