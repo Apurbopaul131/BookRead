@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { Toaster } from 'react-hot-toast';
 import { Outlet, useLoaderData } from "react-router-dom";
 import "./App.css";
 import {
+  AuthContext,
   OrginalBooksData,
   ReadBookList,
   WishBookList,
@@ -15,13 +17,20 @@ function App() {
   const [readlist, setReadlist] = useState([]);
   //create state to handle wish list book
   const [wishlist, setWishlist] = useState([]);
+  const {loading} = useState(AuthContext);
   return (
     <>
       <div className="mx-10">
+        <Toaster/>
         <WishBookList.Provider value={[wishlist, setWishlist]}>
           <ReadBookList.Provider value={[readlist, setReadlist]}>
             <OrginalBooksData.Provider value={data}>
               <Navbar></Navbar>
+              {
+                loading && <div className="text-center mt-5">
+                <span className="loading loading-spinner loading-lg text-warning"></span>
+              </div>
+              }
               <Outlet></Outlet>
             </OrginalBooksData.Provider>
           </ReadBookList.Provider>

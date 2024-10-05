@@ -8,3 +8,6 @@ export const ReadBookList = createContext([]);
 
 //This context is created for handle wishlist list book
 export const WishBookList = createContext([]);
+
+//This context is created for handle firebase auth realed funcitionalites and data
+export const AuthContext = createContext({});
