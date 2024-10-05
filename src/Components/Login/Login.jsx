@@ -3,10 +3,12 @@ import { useContext, useRef, useState } from "react";
 import toast from "react-hot-toast";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../LevelContext/LevelContext";
 const Login = () => {
-  const navigateHome = useNavigate();
+  const navigate = useNavigate();
+  const location = useLocation();
+  console.log('loacion in login page:',location);
   const [showPass, setShowPass] = useState(false);
   const { loginUser, loginWithGoogle, loginWithGitHub, resetPassword } = useContext(AuthContext);
   const forgetPassEmail = useRef();
@@ -39,7 +41,9 @@ const Login = () => {
           console.log(userCredential.user);
           toast.success(`${userCredential.user.email} signin successfully.`);
           e.target.reset();
-          navigateHome("/")
+
+          //navigae afer login
+          navigate(location?.state ? location.state : "/")
 
         } else {
           console.log(userCredential.user);
@@ -60,7 +64,8 @@ const Login = () => {
     .then((result) => {
         console.log(result.user);
         toast.success(`Login succesfylly with ${result.user.email}`);
-        navigateHome("/")
+         //navigae afer login
+         navigate(location?.state ? location.state : "/")
       })
       .catch((err)=>{
         toast.error(err.message);
@@ -73,7 +78,8 @@ const Login = () => {
     .then((result) => {
         console.log(result.user);
         toast.success(`Login succesfylly with ${result.user.email}`);
-        navigateHome("/")
+         //navigae afer login
+         navigate(location?.state ? location.state : "/")
       })
       .catch((err)=>{
         toast.error(err.message.value);
